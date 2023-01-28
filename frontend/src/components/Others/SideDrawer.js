@@ -78,7 +78,7 @@ const SideDrawer = () => {
           Authorization: `Bearer ${user.token}`,
         },
       };
-      const { data } = await axios.get(`/api/user?search=${search}`, config);
+      const { data } = await axios.get(`${process.env.REACT_APP_BASE_URL}/api/user?search=${search}`, config);
       setSearchResults(data);
       setLoading(false);
     } catch (error) {
@@ -103,7 +103,7 @@ const SideDrawer = () => {
           Authorization: `Bearer ${user.token}`,
         },
       };
-      const { data } = await axios.post("/api/chat", { userId }, config);
+      const { data } = await axios.post(`${process.env.REACT_APP_BASE_URL}/api/chat`, { userId }, config);
       setSelectedChat(data);
       setLoadingChat(false);
       onClose();
