@@ -55,7 +55,7 @@ const server = app.listen(PORT, () => {
 
 const io = require("socket.io")(server, {
   cors: {
-    origin: "https://mern-chat-zp16.vercel.app/",
+    origin: "https://mern-chat-zp16.vercel.app",
   },
   pingTimeout: 60000,
 });
