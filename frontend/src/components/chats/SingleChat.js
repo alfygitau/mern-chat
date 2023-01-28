@@ -14,7 +14,7 @@ import ScrollableChat from "./ScrollableChat";
 import "../../styles/styles.css";
 import io from "socket.io-client";
 
-let ENDPOINT = "http://localhost:5000";
+let ENDPOINT = "https://mern-chat-e8dm.onrender.com";
 let socket, selectedChatCompare;
 
 const SingleChat = ({ fetchAgain, setFetchAgain }) => {
